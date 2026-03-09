@@ -73,8 +73,9 @@
 ## Step Details
 
 - **Step 1: Setup Environment**
-  - **Status**: ⏳
+  - **Status**: ✅ Completed
   - **Changes Made**:
+    - Verified JDK 21 availability and Maven functionality
   - **Review Code Changes**:
     - Sufficiency: ✅ All required changes present
     - Necessity: ✅ All changes necessary
@@ -87,9 +88,22 @@
     - Result: ✅ Maven reports Java 21; two JDKs detected
     - Notes: JAVA_HOME set correctly; Maven runs successfully
   - **Deferred Work**: None
-  - **Commit**: created branch; no commit required for environment check
+  - **Commit**: 8f11491 - Step 1: Setup Environment - Compile: SUCCESS
 - **Step 2: Setup Baseline**
-  - **Status**: ⏳
+  - **Status**: ✅ Completed
+  - **Changes Made**:
+    - Ran clean compilation with existing Java 17 configuration
+  - **Review Code Changes**:
+    - Sufficiency: ✅
+    - Necessity: ✅
+  - **Verification**:
+    - Command: `mvn clean test-compile -q` (property java.version=17)
+    - JDK: 21 (used for mvn; compiler release 17)
+    - Build tool: Maven 3.9.11
+    - Result: ✅ BUILD SUCCESS (compiled 4 source files, no test sources)
+    - Notes: baseline established and stored mentally
+  - **Deferred Work**: None
+  - **Commit**: 8f11491 -> no new commit
 - **Step 3: Upgrade Java version property**
   - **Status**: ⏳
 - **Step 4: Compile with Java 21**
