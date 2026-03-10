@@ -1,0 +1,6 @@
+target/
+.m2/
+.vscode/
+*.log
+wildfly-32.0.1.Final/
+wildfly-32.0.1.Final.zip
